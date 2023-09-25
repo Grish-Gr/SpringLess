@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="maks.ter.ver1_xml.model.Cat" id="cat">
+        <property name="name" value="Barsik"/>
+    </bean>
+    <bean class="maks.ter.ver1_xml.model.Dog" id="dog"/>
+
+    <bean class="maks.ter.ver1_xml.model.Person" id="person">
+        <constructor-arg index="0" ref="cat"/>
+        <constructor-arg index="1" ref="dog"/>
+    </bean>
+</beans>
