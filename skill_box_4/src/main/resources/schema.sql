@@ -1,0 +1,26 @@
+DROP TABLE IF EXISTS authors;
+DROP TABLE IF EXISTS books;
+DROP TABLE IF EXISTS genres;
+
+CREATE TABLE genres(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    description VARCHAR(255)
+);
+
+CREATE TABLE authors(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    surname VARCHAR(255),
+    lastname VARCHAR(255)
+);
+
+CREATE TABLE books(
+   id BIGINT AUTO_INCREMENT PRIMARY KEY,
+   author_id BIGINT NOT NULL,
+   title VARCHAR(250) NOT NULL,
+   price_old INTEGER DEFAULT NULL,
+   price INTEGER DEFAULT NULL,
+
+   FOREIGN KEY (author_id) REFERENCES authors (id)
+);
