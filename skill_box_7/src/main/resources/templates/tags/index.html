@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Главная</title>
+    <meta name="description" content="Описание страницы">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-Light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/fonts.min.css?v=64223515">
+    <link rel="stylesheet" href="/assets/css/basic.min.css?v=64223515">
+    <link rel="stylesheet" href="/assets/css/extra.min.css?v=64223515">
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="/assets/js/book-tag.min.js"></script>
+</head>
+
+<body class="Site">
+<header class="Header" th:insert="fragments/common_header_fragment">
+</header>
+
+
+<div class="Middle">
+    <div class="wrap">
+        <main class="Middle-main">
+            <div class="Section">
+                <div class="Section-header">
+                    <h1 class="Section-title">Книги по тэгу</h1>
+                </div>
+                <div class="Cards Cards_refresh" id="cards-block">
+                </div>
+                <div class="Cards-footer Cards-footer_center">
+                        <span id="load-books"
+                              onclick="loadBooks()"
+                              class="btn btn_primary"
+                              book-type="tags"
+                              max="20"
+                        >Показать еще</span>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+
+<footer class="Footer" th:insert="fragments/common_footer_fragment">
+</footer>
+</body></html>
