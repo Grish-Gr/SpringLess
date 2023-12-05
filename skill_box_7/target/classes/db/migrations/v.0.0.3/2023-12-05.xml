@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="2023-11-11" author="Gr-Gr">
+
+        <createTable tableName="book_to_genres">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="book_id" type="BIGINT">
+                <constraints nullable="false"
+                             foreignKeyName="fk_book_book_to_genres"
+                             references="books(id)"/>
+            </column>
+            <column name="genre_id" type="BIGINT">
+                <constraints nullable="false"
+                             foreignKeyName="fk_genre_book_to_genres"
+                             references="genres(id)"/>
+            </column>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>
