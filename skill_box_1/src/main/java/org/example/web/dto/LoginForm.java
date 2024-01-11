@@ -1,4 +1,4 @@
-package maks.ter.web.dto;
+package org.example.web.dto;
 
 public class LoginForm {
 

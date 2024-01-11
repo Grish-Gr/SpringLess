@@ -1,7 +1,7 @@
-package maks.ter.app.services;
+package org.example.app.services;
 
-import maks.ter.web.dto.LoginForm;
 import org.apache.log4j.Logger;
+import org.example.web.dto.LoginForm;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,14 +1,15 @@
-package maks.ter.web.controllers;
+package org.example.web.controllers;
 
 import org.apache.log4j.Logger;
-import maks.ter.app.services.LoginService;
-import maks.ter.web.dto.LoginForm;
+import org.example.app.services.LoginService;
+import org.example.web.dto.LoginForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping(value = "/login")
