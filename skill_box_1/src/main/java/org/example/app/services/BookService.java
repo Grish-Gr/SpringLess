@@ -21,8 +21,7 @@ public class BookService {
     }
 
     public void saveBook(Book book) {
-        System.out.println("<<<<<<<<<<<<<<<<<<<< book");
-        System.out.println(book.toString());
+
         if ((book.getAuthor() == null || book.getTitle().isBlank()) &&
             (book.getSize() == null || book.getSize().isBlank()) &&
             (book.getTitle() == null || book.getTitle().isBlank())
