@@ -47,8 +47,7 @@ public class BookRepository<T> implements ProjectRepository<Book>, ApplicationCo
         Pattern pattern = Pattern.compile(regexValue, Pattern.CASE_INSENSITIVE);
 
         for (Book book : retreiveAll()) {
-            System.out.println(book);
-            System.out.println(pattern.toString());
+
             if (pattern.matcher(book.getTitle()).find() ||
                 pattern.matcher(book.getAuthor()).find() ||
                 pattern.matcher(book.getSize()).find()
